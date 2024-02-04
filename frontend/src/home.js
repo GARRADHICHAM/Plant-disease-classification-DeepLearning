@@ -13,6 +13,9 @@ import cblogo from "./cblogo.PNG";
 import imagebg from "./bgg.jpg";
 import back from "./ilustration.png";
 import back2 from "./back2.jpg";
+import dev from "./dev.jpg";
+import git from "./git.png";
+import kaggle from "./kaggle.png";
 import { DropzoneArea } from 'material-ui-dropzone';
 import { common } from '@material-ui/core/colors';
 import Clear from '@material-ui/icons/Clear';
@@ -245,22 +248,70 @@ export const ImageUpload = () => {
             </div>
           </div>
         </div>
-        <div id="doc" className="flex-col h-screen w-full  space-y-2  bg-[#F0F2F5]  p-20  overflow-hidden ">
+        <div id="doc" className="flex-col h-auto w-full  space-y-2  bg-[#F0F2F5]  p-20  overflow-hidden ">
           <div className="flex bg-white w-full h-full rounded-xl border-gray-300 border">
             <div className="w-1/3 p-6">
-              <img src={back2} className="" />
+              <img src={dev} className="" />
             </div>
 
-            <div className="w-2/3 space-y-2 flex-col p-6 h-full">
-              <h1 className="text-center text-xl font-bold">Documentation</h1>
+            <div className="w-2/3 space-y-4 flex-col p-6 h-full">
+              <h1 className=" text-[20px]  font-bold">
+                Documentation du Projet : Application de Détection des Maladies des Pommes de Terre
+              </h1>
+              <h1 className=" text-xl text-gray-600 font-bold">Introduction :</h1>
+
               <p className="font-semibold text-gray-400 text-lg">
-                Votre application offre une approche pratique et accessible pour les agriculteurs qui peuvent désormais diagnostiquer les problèmes de santé de leurs plants en soumettant simplement des photos des feuilles. La capacité de déterminer le type de maladie grâce à l'analyse visuelle facilite une intervention rapide et ciblée.
-
-                Pour améliorer davantage votre application, vous pourriez envisager d'intégrer des conseils de gestion spécifiques à chaque maladie détectée. Cela permettrait aux utilisateurs de prendre des mesures correctives précises pour minimiser les dommages. De plus, une fonctionnalité éducative fournissant des informations détaillées sur les maladies identifiées et des recommandations de bonnes pratiques agricoles pourrait renforcer l'impact de votre application.
-
-                N'oubliez pas de mettre en avant la convivialité de l'interface et de garantir la précision des résultats de détection.
+                Bienvenue dans la documentation de l'application de détection des maladies des pommes de terre. Cette application utilise React pour le front end, une API Python pour la communication avec le modèle de réseau neuronal convolutif (CNN) entraîné dans un Jupyter Notebook. Les données d'entraînement proviennent d'un ensemble de données Kaggle.
 
 
+              </p>
+              <h1 className="flex items-center space-x-2 text-xl text-gray-600 font-bold">  Project sur Github :{' '}
+              <img src={git} className="w-8" />
+                <a className="underline text-[blue] text-lg" href="https://github.com/GARRADHICHAM/disease-classification/tree/main" target="_blank" rel="noopener noreferrer">
+                  Github
+                </a></h1>
+              <h1 className="flex items-center space-x-2  text-xl text-gray-600 font-bold">  Dataset utilise :{' '}
+              <img src={kaggle} className="w-6" />
+                <a className="underline text-[blue] text-lg" href="https://www.kaggle.com/datasets/arjuntejaswi/plant-village" target="_blank" rel="noopener noreferrer">
+                  Kaggle
+                </a></h1>
+
+              <h1 className=" text-xl text-gray-600 font-bold">Fonctionnalités Principales :</h1>
+              <p className="font-semibold flex text-gray-400 text-lg">
+                <ul className="space-y-4">
+                  <li>
+                    <h1 className="text-black ">Interface Utilisateur (Front End - React) :</h1>
+
+                    Interface conviviale permettant aux utilisateurs de soumettre des images des feuilles de pommes de terre pour la détection des maladies.
+                    Affichage des résultats de détection de manière claire et accessible.
+                    Intégration d'une interface interactive pour une expérience utilisateur optimale.
+
+                  </li>
+                  <li>
+                    <h1 className="text-black ">API Python :</h1>
+
+                    Établissement d'une communication fluide entre le front end et le modèle CNN.
+                    Gestion des requêtes d'images et transfert des données au modèle pour la détection.
+                    Retour des résultats du modèle au front end de manière structurée.
+
+                  </li>
+                  <li>
+                    <h1 className="text-black ">Modèle CNN (Jupyter Notebook) :</h1>
+
+                    Entraînement du modèle avec un ensemble de données Kaggle comprenant des images de feuilles de pommes de terre saines et malades.
+                    Utilisation de techniques de réseau neuronal convolutif pour la détection précise des maladies.
+                    Exportation du modèle pour son utilisation dans l'API Python.
+
+                  </li>
+                  <li>
+                    <h1 className="text-black ">Utilisation de l'Application :</h1>
+
+                    Soumettez une image de feuilles de pommes de terre via l'interface utilisateur.
+                    L'API Python recevra la requête, traitera l'image, et interagira avec le modèle CNN.
+                    Les résultats de la détection seront affichés sur l'interface utilisateur.
+
+                  </li>
+                </ul>
               </p>
             </div>
           </div>
